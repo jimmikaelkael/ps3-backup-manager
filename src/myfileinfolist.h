@@ -1,0 +1,6 @@
+#ifndef MYFILEINFOLIST_H
+#define MYFILEINFOLIST_H
+
+
+
+#endif // MYFILEINFOLIST_H

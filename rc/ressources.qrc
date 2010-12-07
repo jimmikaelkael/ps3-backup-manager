@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/ad_res">
+        <file>banniere-metashop.jpg</file>
+    </qresource>
+</RCC>

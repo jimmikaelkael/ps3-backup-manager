@@ -1,0 +1,50 @@
+ 
+ PS3-Backup-Manager
+ Copyright (c) 2010 - Metagames <http://www.metagames-eu.com>
+
+ This program is distributed under GNU GPL v3 License agreement, please
+review the attached "LICENSE" file for details.
+
+ The source code is available at:
+http://github.com/jimmikaelkael/ps3-backup-manager
+
+ The application was written and build with Qt4.
+ The executables were packed with UPX (http://upx.sourceforge.net).
+
+ Here's the list of authors and licenses for images used in this application:
+- about.png, error.png, information.png:
+ Author: VisualPharm, http://www.visualpharm.com/
+ License: CC Attribution No Derivatives
+
+- branch-open.png, branch-close.png:
+ Author: Everaldo Coelho, http://www.everaldo.com
+ License: GNU Lesser General Public License
+
+- checkmark.png:
+ Author: Burak OZTURK, http://www.hadibe.com
+ License: Free
+
+- clean.png, split.png:
+ Author: Ahmad Hania, http://ahmad-hania.wateentech.com
+ License: CC Attribution Non-Commercial Share Alike
+
+- csv.png:
+ Author: Arrioch (Milos Mirkovic) http://arrioch.deviantart.com/
+ License: CC Attribution Non-Commercial No Derivatives 3.0
+
+- ftp-explorer.png:
+ Author: Asher Abbasi, http://kyo-tux.deviantart.com/
+ License: CC Attribution Non-Commercial No Derivatives
+
+- ps3.png (also used as app icon):
+ Author: The Yellow Icon, http://www.yellowicon.com/
+ License: Free
+
+- quit.png:
+ Author: GNOME icon artists, http://gnome.org
+ License: GNU General Public License, version 2
+
+- txt.png:
+ Author: Vincent Tremblay, http://silver-pyrotech.deviantart.com/
+ License: CC Attribution Non-Commercial No Derivatives
+

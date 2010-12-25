@@ -248,19 +248,19 @@ private:
             if (checkAborted())
                 return 0;
 
-            QFileInfo fileInfo(startPath + QDir::separator() + file);
+            MyFileInfo fileInfo(startPath + QDir::separator() + file);
             if (!fileInfo.isSymLink()) {
-                if (fileInfo.size() > 4294967296LL) {
+                if (fileInfo.isFileGreaterThan4GB()) {
                     qDebug() << "file" << fileInfo.absoluteFilePath() << "is greater than 4GB";
                     int parts = 0;
                     qint64 size = fileInfo.size();
                     while (size > 0) {
-                        size -= 4294967296LL;
+                        size -= 4294967295LL;
                         parts++;
                     }
                     qDebug() << "needed parts=" << parts;
                     count++;
-                    bytesToWrite += fileInfo.size() - 4294967296LL;
+                    bytesToWrite += fileInfo.size() - 4294967295LL;
                 }
             }
         }
@@ -381,7 +381,7 @@ private:
                     int parts = 0;
                     qint64 size = fileInfo.size();
                     while (size > 0) {
-                        size -= 4294967296LL;
+                        size -= 4294967295LL;
                         parts++;
                     }
                     qDebug() << "needed parts=" << parts;
@@ -392,9 +392,9 @@ private:
                     for (int i=parts-1; i>=1; i--) {
                         //size -= 4294967296LL;
                         //qint64 maxSize = 4294967296LL;
-                        qint64 maxSize = size % 4294967296LL;
+                        qint64 maxSize = size % 4294967295LL;
                         if (maxSize == 0)
-                            maxSize = 4294967296LL;
+                            maxSize = 4294967295LL;
                         //if (i == (parts-1))
                         //    maxSize = size;
 
@@ -443,7 +443,7 @@ private:
                             }
 
                             qDebug() << "split file=" << splitFileName << "size=" << maxSize;
-                            res = splitFileByBlock(fileInfo.absoluteFilePath(), splitFileName, i * 4294967296LL, maxSize);
+                            res = splitFileByBlock(fileInfo.absoluteFilePath(), splitFileName, i * 4294967295LL, maxSize);
 
                             size -= maxSize;
                         }
@@ -451,7 +451,7 @@ private:
                             return 0;
                     }
                     if (res) {
-                        QFile(fileInfo.absoluteFilePath()).resize(4294967296LL);
+                        QFile(fileInfo.absoluteFilePath()).resize(4294967295LL);
                         count++;
                         filesToSplit--;
                     }

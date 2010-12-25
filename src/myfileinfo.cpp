@@ -40,7 +40,7 @@ void MyFileInfo::setDestinationFilePath(QString filePath)
 
 bool MyFileInfo::isFileGreaterThan4GB()
 {
-    if (this->size() > 4294967296LL)
+    if (this->size() >= 4294967296LL)
         return true;
 
     return false;
